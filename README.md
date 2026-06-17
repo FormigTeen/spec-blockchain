@@ -1,15 +1,61 @@
-# spec-blockchain
+# Blockchain como Sistema Distribuído
 
-Made with ❤️ and [Spectacle](https://github.com/FormidableLabs/spectacle/).
+Apresentação web sobre blockchain a partir da perspectiva de sistemas distribuídos. O projeto explica a tecnologia para além das criptomoedas, conectando conceitos de consenso, replicação, criptografia, descentralização, Bitcoin, smart contracts e Ethereum.
 
-## Running your presentation
+Versão publicada: https://formigteen.github.io/spec-blockchain
 
-- Run `yarn install` (or `npm install` or `pnpm install`) to install dependencies.
-- Run `yarn start` (or `npm start` or `pnpm start`) to start the presentation.
-- Edit `index.tsx` to add your presentation content.
+## Sobre o projeto
 
-## Building you presentation
+Este repositório reúne uma apresentação interativa feita com React, Spectacle e Vite, além de uma monografia em LaTeX/PDF sobre o mesmo tema.
 
-To build your presentation for a production deploy, run `yarn build` (or `npm build` or `pnpm build`).
+O conteúdo aborda:
 
-The build artifacts will be placed in the `dist` directory. If you'd like to change this location, edit `build.outDir` in `vite.config.ts`.
+- fundamentos de blockchain como ledger distribuído;
+- redes peer-to-peer, descentralização e tolerância a falhas;
+- funções hash, árvores de Merkle, criptografia simétrica e assimétrica;
+- consenso, Proof of Work, Proof of Stake e trade-offs de arquitetura;
+- Bitcoin, transações, blocos, mineração, carteiras e script;
+- smart contracts, DApps, DAOs, oráculos e Ethereum.
+
+## Tecnologias
+
+- React
+- TypeScript
+- Vite
+- Spectacle
+- Framer Motion
+- React Latex
+
+## Como executar
+
+Instale as dependências:
+
+```bash
+yarn install
+```
+
+Inicie a apresentação localmente:
+
+```bash
+yarn start
+```
+
+Por padrão, o Vite sobe em `http://localhost:3001`.
+
+## Build
+
+Gere a versão de produção:
+
+```bash
+yarn build
+```
+
+Os arquivos finais são gerados em `dist/`.
+
+## Estrutura
+
+- `index.tsx`: apresentação principal em Spectacle.
+- `src/assets/`: imagens usadas nos slides.
+- `monografia.tex`: fonte da monografia.
+- `monografia.pdf`: versão compilada da monografia.
+- `vite.config.ts`: configuração do Vite e do caminho base de deploy.
