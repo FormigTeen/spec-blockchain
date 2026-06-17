@@ -1,0 +1,130 @@
+\contentsline {chapter}{Resumo}{i}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Introdução às Blockchains e Sistemas Distribuídos}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contexto e Motivação}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Origens e Evolução Histórica}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Os Precursores: Criptografia e Moedas Eletrônicas}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}O Bitcoin e a Invenção do Blockchain}{2}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Da Criptomoeda à Tecnologia de Propósito Geral}{2}{subsection.1.2.3}%
+\contentsline {section}{\numberline {1.3}Sistemas Distribuídos: Fundamentos}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Definição e Características}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}O Problema dos Generais Bizantinos}{3}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}O Teorema CAP}{4}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}O Teorema PACELC}{4}{subsection.1.3.4}%
+\contentsline {section}{\numberline {1.4}Arquitetura Geral de uma Blockchain}{5}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Definições Fundamentais}{5}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Visão em Camadas}{5}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Elementos Genéricos}{6}{subsection.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}O Processo de Consenso e Adição de Blocos}{7}{subsection.1.4.4}%
+\contentsline {chapter}{\numberline {2}Descentralização e Arquitetura de Rede}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}O Conceito de Descentralização}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Benefícios da Descentralização}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Resiliência e Eliminação do Ponto Único de Falha}{9}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Resistência à Censura}{9}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Transparência e Confiança Algorítmica}{9}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Rede Peer-to-Peer: Topologia e Comunicação}{9}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Topologia da Rede}{9}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Propagação de Dados e o Protocolo Gossip}{10}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}Descentralização em Prática}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Contratos Inteligentes}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Organizações Autônomas Descentralizadas}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Agentes Autônomos}{11}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}O Dilema da Descentralização}{11}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Tipos de Blockchain por Acesso}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Blockchains Públicas}{12}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Blockchains Privadas e de Consórcio}{12}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Blockchains Semi-Privadas e Híbridas}{12}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Ledgers Permissionados}{13}{subsection.2.6.4}%
+\contentsline {section}{\numberline {2.7}Tipos por Token}{13}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Arquitetura em Camadas}{13}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Blockchains de Camada 1}{13}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Blockchains de Camada 2}{14}{subsection.2.8.2}%
+\contentsline {chapter}{\numberline {3}Fundamentos Criptográficos}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introdução à Criptografia}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Serviços Providos pela Criptografia}{15}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Primitivas Criptográficas}{16}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Primitivas Sem Chave}{16}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Primitivas de Chave Simétrica}{16}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Primitivas de Chave Assimétrica}{17}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Funções de Hash}{17}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Propriedades das Funções de Hash}{17}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}SHA-256 e Aplicações em Blockchain}{17}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Árvore de Merkle}{18}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Criptografia Simétrica}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Criptografia Assimétrica}{19}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Fundamentos Matemáticos}{19}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Chaves Pública e Privada: Geração e Segurança}{19}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Assinaturas Digitais}{20}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Endereços em Blockchain}{20}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Algoritmos de Consenso}{21}{chapter.4}%
+\contentsline {section}{\numberline {4.1}O Problema do Consenso em Sistemas Distribuídos}{21}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Requisitos Fundamentais}{22}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Tolerância a Falhas}{22}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Falhas Bizantinas}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Proof of Work}{23}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Mecanismo e Busca do Nonce}{23}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Target Hash e Dificuldade Ajustável}{24}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Segurança por Custo Computacional}{24}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Proof of Stake}{24}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Validadores e Stake como Garantia}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Seleção de Validadores}{25}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Slashing e Recompensas}{25}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}O Problema do Nothing at Stake}{25}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Comparação entre PoW e PoS}{26}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Trade-offs de Consenso}{26}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}O Teorema CAP Revisitado}{26}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}O Triângulo Impossível}{27}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Finalidade: Probabilística versus Determinística}{27}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Bitcoin --- A Pioneira}{28}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Contexto Histórico e o Whitepaper de Satoshi Nakamoto}{28}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Criptografia de Chaves e Posse de Bitcoin}{29}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Chave Privada}{29}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Chave Pública}{30}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Endereço Bitcoin}{30}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Custódia e Carteiras}{31}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Estrutura do Bloco Bitcoin}{31}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Cabeçalho do Bloco}{31}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Corpo do Bloco e a Transação Coinbase}{31}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Encadeamento e Imutabilidade}{32}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Transações e o Modelo UTXO}{32}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}O Modelo UTXO}{32}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Estrutura de uma Transação}{32}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Scripts e P2PKH}{33}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Ciclo de Vida de uma Transação e a Mempool}{33}{subsection.5.4.4}%
+\contentsline {section}{\numberline {5.5}Mineração e Prova de Trabalho}{34}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}O Problema do Nonce e o Alvo de Dificuldade}{34}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Ajuste de Dificuldade}{34}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Recompensa e Halving}{34}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}Evolução do Hardware de Mineração}{35}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.5}Pools de Mineração}{35}{subsection.5.5.5}%
+\contentsline {section}{\numberline {5.6}A Cadeia: Encadeamento, Imutabilidade e Reorganização}{35}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Encadeamento por Hash}{35}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Forks e Reorganização}{36}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}A Rede Peer-to-Peer}{36}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Descoberta e Propagação}{36}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Tipos de Nós}{36}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Bloom Filters e Privacidade em SPV}{37}{subsection.5.7.3}%
+\contentsline {section}{\numberline {5.8}Carteiras Bitcoin}{37}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Tipos de Carteiras}{37}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}HD Wallets, BIP32/39/44 e Seed Phrases}{38}{subsection.5.8.2}%
+\contentsline {section}{\numberline {5.9}Limitações e Críticas ao Bitcoin}{39}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Throughput e Escalabilidade}{39}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Consumo Energético}{39}{subsection.5.9.2}%
+\contentsline {subsection}{\numberline {5.9.3}Programabilidade Limitada}{39}{subsection.5.9.3}%
+\contentsline {subsection}{\numberline {5.9.4}Privacidade}{40}{subsection.5.9.4}%
+\contentsline {subsection}{\numberline {5.9.5}Vulnerabilidades e Bugs Históricos}{40}{subsection.5.9.5}%
+\contentsline {chapter}{\numberline {6}Contratos Inteligentes, Aplicações Descentralizadas e Oráculos}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Da Blockchain como Registro à Blockchain Programável}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Propriedades dos Contratos Inteligentes}{42}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Smart Contracts no Bitcoin e no Ethereum}{42}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Aplicações Descentralizadas}{43}{section.6.4}%
+\contentsline {section}{\numberline {6.5}DAOs e o Problema da Governança}{43}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Oráculos e a Ponte com o Mundo Real}{44}{section.6.6}%
+\contentsline {chapter}{\numberline {7}Arquitetura do Ethereum}{45}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Ethereum como Máquina de Estados Programável}{45}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Contas, Chaves e Endereços}{45}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Transações, Mensagens e Gas}{46}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Ethereum Virtual Machine}{46}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Estruturas de Dados e Estado}{47}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Consenso e a Transição para Proof of Stake}{47}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Tokens, Padrões e Ecossistema}{47}{section.7.7}%
+\contentsline {chapter}{\numberline {8}Conclusão}{49}{chapter.8}%
