@@ -1234,6 +1234,185 @@ const LayerTypesSlide = () => (
   </Slide>
 );
 
+const chainBlockStyle = (color: string, width = 74) => ({
+  width,
+  height: 48,
+  borderRadius: 8,
+  background: color,
+  boxShadow: '0 14px 32px rgba(0,0,0,0.46)',
+  border: '3px solid #FFFFFF',
+  color: '#020817',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontWeight: 900,
+  fontSize: 19,
+});
+
+const flowCardStyle = (color: string) => ({
+  minHeight: 118,
+  borderRadius: 8,
+  border: '3px solid #FFFFFF',
+  background: color,
+  color: '#020817',
+  padding: '14px 16px',
+  boxShadow: '0 14px 32px rgba(0,0,0,0.44)',
+  display: 'flex',
+  flexDirection: 'column' as const,
+  justifyContent: 'center',
+});
+
+const Layer2VsLayer1AnimationSlide = () => (
+  <Slide backgroundColor="paper" style={{ background: theme.colors.paper, color: theme.colors.ink }}>
+    <FlexBox height="100%" flexDirection="column" alignItems="stretch" justifyContent="flex-start" padding="24px 54px">
+      <Kicker>Sistemas Distribuídos?</Kicker>
+      <Heading color="ink" fontSize="38px" lineHeight={1.04} margin="0 0 8px">
+        Layer 2 x Layer 1
+      </Heading>
+      <Text color="white" fontSize="21px" fontWeight={800} lineHeight={1.16} margin="0 0 14px">
+        Layer 2 não é uma blockchain separada: ela executa fora, mas publica provas e herda a segurança da Layer 1.
+      </Text>
+
+      <div
+        style={{
+          height: 360,
+          flex: '0 0 360px',
+          borderRadius: 8,
+          border: '3px solid #FFFFFF',
+          background: '#020817',
+          padding: 22,
+          display: 'grid',
+          gridTemplateColumns: '1fr 130px 1.2fr',
+          columnGap: 22,
+          alignItems: 'center',
+        }}
+      >
+        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', rowGap: 18 }}>
+          <div style={{ border: '3px solid #00E676', borderRadius: 8, padding: 16 }}>
+            <div style={{ color: '#00E676', fontSize: 24, fontWeight: 900, marginBottom: 8 }}>Layer 2</div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.2 }}>
+              Executa muitas transações fora da camada base.
+            </div>
+            <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+              {['tx', 'tx', 'tx'].map((label, index) => (
+                <div key={`l2-stack-${index}`} style={chainBlockStyle('#00E676', 56)}>{label}</div>
+              ))}
+            </div>
+          </div>
+          <div style={{ border: '3px solid #38BDF8', borderRadius: 8, padding: 16 }}>
+            <div style={{ color: '#38BDF8', fontSize: 24, fontWeight: 900, marginBottom: 8 }}>Layer 1</div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.2 }}>
+              Mantém consenso, segurança e estado final.
+            </div>
+            <div style={{ display: 'flex', gap: 8, marginTop: 12 }}>
+              {['B1', 'B2', 'B3'].map((label) => (
+                <div key={label} style={chainBlockStyle('#38BDF8', 56)}>{label}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr 1fr', justifyItems: 'center', alignItems: 'center' }}>
+          <div style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 900, textAlign: 'center' }}>resultado compactado</div>
+          <div style={{ color: '#FFFFFF', fontSize: 48, fontWeight: 900 }}>↓</div>
+          <div style={{ ...flowCardStyle('#FFFFFF'), minHeight: 82, textAlign: 'center' }}>
+            <div style={{ fontSize: 18, fontWeight: 900 }}>Prova / lote</div>
+            <div style={{ fontSize: 14, fontWeight: 800, lineHeight: 1.15 }}>publicado na L1</div>
+          </div>
+        </div>
+        <div style={{ border: '3px solid #FFFFFF', borderRadius: 8, padding: 20, minHeight: 276, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div style={{ color: '#FFFFFF', fontSize: 26, fontWeight: 900, marginBottom: 14 }}>
+            Diferença principal
+          </div>
+          <div style={{ color: '#00E676', fontSize: 22, fontWeight: 900, lineHeight: 1.2, marginBottom: 14 }}>
+            A Layer 2 fica sobre a Layer 1.
+          </div>
+          <div style={{ display: 'grid', rowGap: 10 }}>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.2 }}>
+              1. Executa transações fora da camada base.
+            </div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.2 }}>
+              2. Publica lote ou prova na Layer 1.
+            </div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.2 }}>
+              3. Usa a Layer 1 como segurança e finalização.
+            </div>
+          </div>
+        </div>
+      </div>
+    </FlexBox>
+  </Slide>
+);
+
+const SidechainVsLayer1AnimationSlide = () => (
+  <Slide backgroundColor="paper" style={{ background: theme.colors.paper, color: theme.colors.ink }}>
+    <FlexBox height="100%" flexDirection="column" alignItems="stretch" justifyContent="flex-start" padding="24px 54px">
+      <Kicker>Sistemas Distribuídos?</Kicker>
+      <Heading color="ink" fontSize="38px" lineHeight={1.04} margin="0 0 8px">
+        Sidechain x Layer 1
+      </Heading>
+      <Text color="white" fontSize="21px" fontWeight={800} lineHeight={1.16} margin="0 0 14px">
+        Sidechain é outra blockchain: roda consenso próprio e usa ponte para trocar ativos ou dados com a Layer 1.
+      </Text>
+
+      <div
+        style={{
+          height: 360,
+          flex: '0 0 360px',
+          borderRadius: 8,
+          border: '3px solid #FFFFFF',
+          background: '#020817',
+          padding: 22,
+          display: 'grid',
+          gridTemplateColumns: '1fr 140px 1fr',
+          columnGap: 20,
+          alignItems: 'center',
+        }}
+      >
+        <div style={{ border: '3px solid #38BDF8', borderRadius: 8, padding: 18, minHeight: 276, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 20 }}>
+          <div>
+            <div style={{ color: '#38BDF8', fontSize: 24, fontWeight: 900, marginBottom: 12 }}>Layer 1</div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.25 }}>
+              Cadeia principal, com consenso e segurança próprios.
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: 10 }}>
+            {['B1', 'B2', 'B3'].map((label) => (
+              <div key={label} style={chainBlockStyle('#38BDF8', 64)}>{label}</div>
+            ))}
+          </div>
+          <div style={{ ...flowCardStyle('#38BDF8'), minHeight: 72 }}>
+            <div style={{ fontSize: 16, fontWeight: 900 }}>Segurança da L1</div>
+          </div>
+        </div>
+        <div style={{ minHeight: 276, display: 'grid', gridTemplateRows: '1fr auto 1fr', alignItems: 'center', justifyItems: 'center' }}>
+          <div style={{ color: '#FFFFFF', fontSize: 42, fontWeight: 900 }}>⇄</div>
+          <div style={{ ...flowCardStyle('#FFFFFF'), minHeight: 118, textAlign: 'center' }}>
+            <div style={{ fontSize: 18, fontWeight: 900, marginBottom: 6 }}>Ponte</div>
+            <div style={{ fontSize: 14, fontWeight: 800, lineHeight: 1.15 }}>move ou espelha ativos entre cadeias</div>
+          </div>
+          <div style={{ color: '#FFFFFF', fontSize: 42, fontWeight: 900 }}>⇄</div>
+        </div>
+        <div style={{ border: '3px solid #FFD600', borderRadius: 8, padding: 18, minHeight: 276, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 20 }}>
+          <div>
+            <div style={{ color: '#FFD600', fontSize: 24, fontWeight: 900, marginBottom: 12 }}>Sidechain</div>
+            <div style={{ color: '#FFFFFF', fontSize: 17, fontWeight: 800, lineHeight: 1.25 }}>
+              Cadeia paralela, com validadores e regras próprias.
+            </div>
+          </div>
+          <div style={{ display: 'flex', gap: 10 }}>
+            {['S1', 'S2', 'S3'].map((label) => (
+              <div key={label} style={chainBlockStyle('#FFD600', 64)}>{label}</div>
+            ))}
+          </div>
+          <div style={flowCardStyle('#FFD600')}>
+            <div style={{ fontSize: 16, fontWeight: 900 }}>Segurança própria</div>
+          </div>
+        </div>
+      </div>
+    </FlexBox>
+  </Slide>
+);
+
 const NodeCommunicationSlide = () => (
   <Slide backgroundColor="paper" style={{ background: theme.colors.paper, color: theme.colors.ink }}>
     <FlexBox height="100%" flexDirection="column" alignItems="stretch" justifyContent="flex-start" padding="42px 54px">
@@ -2525,6 +2704,235 @@ const ConceitosGeraisSlide = () => (
   </Slide>
 );
 
+const bitcoinTxExamples = [
+  {
+    title: 'Exemplo 1',
+    from: 'Alice',
+    to: 'Bruno',
+    amount: '0,015 BTC',
+    fromAddress: 'bc1q...a92f',
+    toAddress: 'bc1q...7k3d',
+    key: 'chave privada de Alice'
+  },
+  {
+    title: 'Exemplo 2',
+    from: 'Bruno',
+    to: 'Carla',
+    amount: '0,006 BTC',
+    fromAddress: 'bc1q...7k3d',
+    toAddress: 'bc1q...p8m4',
+    key: 'chave privada de Bruno'
+  },
+  {
+    title: 'Exemplo 3',
+    from: 'Carla',
+    to: 'Diego',
+    amount: '0,002 BTC',
+    fromAddress: 'bc1q...p8m4',
+    toAddress: 'bc1q...z1r9',
+    key: 'chave privada de Carla'
+  }
+];
+
+const BitcoinTransactionKeysSlide = () => (
+  <Slide backgroundColor="paper" style={{ background: theme.colors.paper, color: theme.colors.ink }}>
+    <FlexBox height="100%" flexDirection="column" alignItems="stretch" justifyContent="flex-start" padding="30px 54px">
+      <Kicker>Bitcoin</Kicker>
+      <Heading color="ink" fontSize="42px" lineHeight={1.06} margin="0 0 8px">
+        Transações como eventos
+      </Heading>
+      <Text color="white" fontSize="21px" fontWeight={850} lineHeight={1.16} margin="0 0 14px">
+        O Bitcoin não altera uma “conta” diretamente: ele acrescenta transações ao histórico. O estado de posse é derivado desse log.
+      </Text>
+
+      <div
+        style={{
+          height: 382,
+          flex: '0 0 382px',
+          border: '3px solid #FFFFFF',
+          borderRadius: 8,
+          background: '#020817',
+          padding: 18,
+          display: 'grid',
+          gridTemplateRows: 'auto 1fr auto',
+          rowGap: 14
+        }}
+      >
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr auto 1fr',
+            alignItems: 'center',
+            columnGap: 16
+          }}
+        >
+          <div style={{ color: '#FF6B3A', fontSize: 23, fontWeight: 950 }}>Log append-only da blockchain</div>
+          <div style={{ color: '#FFFFFF', fontSize: 30, fontWeight: 950 }}>→</div>
+          <div style={{ color: '#FFFFFF', fontSize: 19, fontWeight: 900, textAlign: 'right' }}>
+            Cada bloco guarda eventos de transação já assinados.
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 34px 1fr 34px 1fr', columnGap: 10, alignItems: 'stretch' }}>
+          {bitcoinTxExamples.map((tx, index) => (
+            <React.Fragment key={tx.title}>
+              <div
+                style={{
+                  border: '3px solid #FFFFFF',
+                  borderRadius: 8,
+                  padding: 14,
+                  display: 'grid',
+                  gridTemplateRows: 'auto auto 1fr auto',
+                  rowGap: 9,
+                  boxShadow: '0 14px 30px rgba(0,0,0,0.34)'
+                }}
+              >
+                <div style={{ color: '#FF6B3A', fontSize: 17, fontWeight: 950 }}>Evento {index + 1}</div>
+                <div style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 950, lineHeight: 1.08 }}>
+                  {tx.from} → {tx.to}
+                </div>
+                <div style={{ display: 'grid', rowGap: 7 }}>
+                  <div style={{ borderLeft: '5px solid #38BDF8', paddingLeft: 8 }}>
+                    <div style={{ color: '#38BDF8', fontSize: 14, fontWeight: 950 }}>Entrada</div>
+                    <div style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 850 }}>{tx.fromAddress}</div>
+                  </div>
+                  <div style={{ borderLeft: '5px solid #00E676', paddingLeft: 8 }}>
+                    <div style={{ color: '#00E676', fontSize: 14, fontWeight: 950 }}>Saída</div>
+                    <div style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 850 }}>{tx.toAddress}</div>
+                  </div>
+                  <div style={{ color: '#FFFFFF', fontSize: 16, fontWeight: 900 }}>{tx.amount}</div>
+                </div>
+                <div style={{ background: '#FFD600', color: '#020817', borderRadius: 8, padding: '8px 10px', fontSize: 14, fontWeight: 950, lineHeight: 1.12 }}>
+                  Assinatura: {tx.key}
+                </div>
+              </div>
+              {index < bitcoinTxExamples.length - 1 && (
+                <div style={{ color: '#FFFFFF', fontSize: 30, fontWeight: 950, alignSelf: 'center', textAlign: 'center' }}>→</div>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', columnGap: 14, alignItems: 'stretch' }}>
+          <div style={{ border: '3px solid #00E676', borderRadius: 8, padding: '11px 14px' }}>
+            <div style={{ color: '#00E676', fontSize: 18, fontWeight: 950, marginBottom: 4 }}>Estado derivado</div>
+            <div style={{ color: '#FFFFFF', fontSize: 16, fontWeight: 850, lineHeight: 1.15 }}>
+              Para saber quem pode gastar, os nós percorrem o histórico e identificam saídas não gastas.
+            </div>
+          </div>
+          <div style={{ border: '3px solid #FFD600', borderRadius: 8, background: '#FFD600', color: '#020817', padding: '11px 14px' }}>
+            <div style={{ fontSize: 18, fontWeight: 950, marginBottom: 4 }}>Regra prática</div>
+            <div style={{ fontSize: 16, fontWeight: 900, lineHeight: 1.15 }}>
+              O usuário envia de um endereço para outro; a chave privada só assina a autorização.
+            </div>
+          </div>
+        </div>
+      </div>
+    </FlexBox>
+  </Slide>
+);
+
+const EthereumBlockExamplesSlide = () => (
+  <Slide backgroundColor="paper" style={{ background: theme.colors.paper, color: theme.colors.ink }}>
+    <FlexBox height="100%" flexDirection="column" alignItems="stretch" justifyContent="flex-start" padding="24px 54px">
+      <Kicker>Ethereum</Kicker>
+      <Heading color="ink" fontSize="38px" lineHeight={1.04} margin="0 0 8px">
+        Blocos, transações e contas
+      </Heading>
+      <Text color="white" fontSize="19px" fontWeight={850} lineHeight={1.14} margin="0 0 12px">
+        No Ethereum, blocos registram transações que podem transferir valor, enviar dados, criar contratos ou executar programas.
+      </Text>
+
+      <div
+        style={{
+          height: 334,
+          flex: '0 0 334px',
+          border: '3px solid #FFFFFF',
+          borderRadius: 8,
+          background: '#020817',
+          padding: 14,
+          display: 'grid',
+          gridTemplateColumns: '1.05fr 42px 1fr',
+          columnGap: 16,
+          alignItems: 'stretch'
+        }}
+      >
+        <div style={{ border: '3px solid #38BDF8', borderRadius: 8, padding: 14, display: 'grid', gridTemplateRows: 'auto 1fr', rowGap: 10 }}>
+          <div>
+            <div style={{ color: '#38BDF8', fontSize: 22, fontWeight: 950, marginBottom: 4 }}>Bloco Ethereum</div>
+            <div style={{ color: '#FFFFFF', fontSize: 15, fontWeight: 850, lineHeight: 1.12 }}>
+              Um bloco agrupa transações ordenadas e aponta para o novo estado global.
+            </div>
+          </div>
+          <div style={{ display: 'grid', rowGap: 8 }}>
+            {[
+              ['TX 1', 'Transferir ETH', 'EOA → EOA'],
+              ['TX 2', 'Chamar contrato', 'dados/calldata + gas'],
+              ['TX 3', 'Criar contrato', 'bytecode publicado']
+            ].map(([tag, title, detail]) => (
+              <div key={tag} style={{ border: '3px solid #FFFFFF', borderRadius: 8, padding: '8px 10px', display: 'grid', gridTemplateColumns: '66px 1fr', columnGap: 9, alignItems: 'center' }}>
+                <div style={{ background: '#38BDF8', color: '#020817', borderRadius: 8, padding: '7px 6px', fontSize: 14, fontWeight: 950, textAlign: 'center' }}>{tag}</div>
+                <div>
+                  <div style={{ color: '#FFFFFF', fontSize: 16, fontWeight: 950 }}>{title}</div>
+                  <div style={{ color: '#FFFFFF', fontSize: 13, fontWeight: 800, opacity: 0.95 }}>{detail}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateRows: '1fr auto 1fr', alignItems: 'center', justifyItems: 'center' }}>
+          <div style={{ color: '#FFFFFF', fontSize: 40, fontWeight: 950 }}>→</div>
+          <div style={{ border: '3px solid #FFFFFF', borderRadius: 8, background: '#FFFFFF', color: '#020817', padding: '10px 8px', fontSize: 15, fontWeight: 950, lineHeight: 1.1, textAlign: 'center' }}>
+            EVM executa
+          </div>
+          <div style={{ color: '#FFFFFF', fontSize: 40, fontWeight: 950 }}>→</div>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr', rowGap: 14 }}>
+          <div style={{ border: '3px solid #00E676', borderRadius: 8, padding: 12 }}>
+            <div style={{ color: '#00E676', fontSize: 21, fontWeight: 950, marginBottom: 6 }}>Contas externas</div>
+            <div style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 850, lineHeight: 1.14, marginBottom: 8 }}>
+              Controladas por chave privada. Podem iniciar transações.
+            </div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              {['Alice', 'Bruno', 'Carla'].map((label) => (
+                <div key={label} style={{ ...chainBlockStyle('#00E676', 70), height: 42, fontSize: 13 }}>{label}</div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ border: '3px solid #FFD600', borderRadius: 8, padding: 12 }}>
+            <div style={{ color: '#FFD600', fontSize: 21, fontWeight: 950, marginBottom: 6 }}>Contas de contrato</div>
+            <div style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 850, lineHeight: 1.14, marginBottom: 8 }}>
+              Têm endereço, código e armazenamento. Executam quando chamadas.
+            </div>
+            <div style={{ display: 'flex', gap: 8 }}>
+              {['DEX', 'NFT', 'DAO'].map((label) => (
+                <div key={label} style={{ ...chainBlockStyle('#FFD600', 70), height: 42, fontSize: 13 }}>{label}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </FlexBox>
+  </Slide>
+);
+
+const ClosingSlide = () => (
+  <Slide backgroundColor="navy">
+    <FlexBox height="100%" flexDirection="column" alignItems="center" justifyContent="center" padding="0 90px">
+      <Kicker>Encerramento</Kicker>
+      <Heading color="primary" fontSize="64px" lineHeight={1.08} textAlign="center" margin="0 0 18px">
+        Obrigado
+      </Heading>
+      <Text color="white" fontSize="28px" fontWeight={800} lineHeight={1.25} textAlign="center" margin="0">
+        Blockchain como sistema distribuído: consenso, criptografia, Bitcoin e Ethereum.
+      </Text>
+    </FlexBox>
+  </Slide>
+);
+
 const Presentation = () => (
   <>
     <GlobalStyles />
@@ -2572,6 +2980,8 @@ const Presentation = () => (
           {topic.title === 'Trade-offs de consenso' && <BlockchainTypesSlide />}
           {topic.title === 'Trade-offs de consenso' && <TokenTypesSlide />}
           {topic.title === 'Trade-offs de consenso' && <LayerTypesSlide />}
+          {topic.title === 'Trade-offs de consenso' && <Layer2VsLayer1AnimationSlide />}
+          {topic.title === 'Trade-offs de consenso' && <SidechainVsLayer1AnimationSlide />}
         </React.Fragment>
       ))}
       <ChapterSlide
@@ -2584,6 +2994,7 @@ const Presentation = () => (
       ))}
       <ChapterSlide chapter="A PIONEIRA" title="Bitcoin" subtitle="Entendendo o que o Bitcoin tem a oferecer" />
       <ConceitosGeraisSlide />
+      <BitcoinTransactionKeysSlide />
       {bitcoinTopics.map((topic, index) => (
         <TopicSlide key={`${topic.chapter}-${topic.title}-${index}`} {...topic} />
       ))}
@@ -2597,8 +3008,12 @@ const Presentation = () => (
       <ChapterSlide chapter="A Evolução" title="Ethereum" subtitle="Entendendo o que o Ethereum tem a oferecer além do Bitcoin." />
       <TopicSlide {...bitcoinEthereumTopic} />
       {ethereumTopics.map((topic, index) => (
-        <TopicSlide key={`${topic.chapter}-${topic.title}-${index}`} {...topic} />
+        <React.Fragment key={`${topic.chapter}-${topic.title}-${index}`}>
+          <TopicSlide {...topic} />
+          {topic.title === 'Conceitos Gerais' && <EthereumBlockExamplesSlide />}
+        </React.Fragment>
       ))}
+      <ClosingSlide />
     </Deck>
   </>
 );

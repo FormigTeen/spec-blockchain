@@ -1,4 +1,5 @@
 \contentsline {chapter}{Resumo}{i}{chapter*.1}%
+\contentsline {chapter}{Declaração de uso de inteligência artificial}{ii}{chapter*.2}%
 \contentsline {chapter}{\numberline {1}Introdução às Blockchains e Sistemas Distribuídos}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Contexto e Motivação}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Origens e Evolução Histórica}{1}{section.1.2}%
